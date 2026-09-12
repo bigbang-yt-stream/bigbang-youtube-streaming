@@ -46,38 +46,41 @@ header{
 
 .hero-crown{
   position:relative;
-  width:58px;
-  height:40px;
-  margin:0 auto 8px;
+  width:54px;
+  height:32px;
+  margin:0 auto 1px;
 }
+
 .hero-crown::before{
   content:"";
   position:absolute;
   left:4px;
-  bottom:5px;
-  width:50px;
-  height:30px;
+  bottom:0;
+  width:46px;
+  height:27px;
   background:#ffd400;
   clip-path:polygon(
-    0 15%,
+    0 18%,
     25% 58%,
     50% 0,
     75% 58%,
-    100% 15%,
+    100% 18%,
     88% 100%,
     12% 100%
   );
 }
+
 .hero-crown::after{
-  content:"●   ●   ●";
+  content:"";
   position:absolute;
+  left:4px;
   top:-3px;
-  left:0;
-  width:58px;
-  color:#ffd400;
-  font-size:10px;
-  letter-spacing:4px;
-  text-align:center;
+  width:46px;
+  height:10px;
+  background:
+    radial-gradient(circle at 5% 55%, #ffd400 0 4px, transparent 4.5px),
+    radial-gradient(circle at 50% 10%, #ffd400 0 4px, transparent 4.5px),
+    radial-gradient(circle at 95% 55%, #ffd400 0 4px, transparent 4.5px);
 }
 .hero-title{
   color:#fff;
@@ -88,7 +91,7 @@ header{
   letter-spacing:1px;
   line-height:0.9;
   transform:scaleX(1.08);
-  margin:10px 0 14px;
+  margin:2px 0 14px;
   text-shadow:
     1px 0 0 #fff,
     -1px 0 0 #fff,
