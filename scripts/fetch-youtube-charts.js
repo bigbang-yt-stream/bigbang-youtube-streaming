@@ -81,6 +81,29 @@ console.log(
   "LIST TYPES:",
   trackTypes.map((item) => item.listType)
 );
+  const songEntries =
+  trackTypes.flatMap((item) => item.trackViews || []);
+
+const bigbangSongs = songEntries.filter((song) =>
+  song.artists?.some((artist) => artist.name === "BIGBANG")
+);
+
+console.log("\n🎧 KOREA · WEEKLY TOP SONGS");
+console.log(`Found ${songEntries.length} song entries`);
+
+bigbangSongs.forEach((song) => {
+  console.log(
+    `#${song.chartEntryMetadata?.currentPosition ?? "?"} ` +
+    `${song.artists?.map((artist) => artist.name).join(", ") || ""} - ` +
+    `${song.name || "Untitled"}`
+  );
+  console.log(
+    `   Previous: #${song.chartEntryMetadata?.previousPosition ?? "?"}`
+  );
+  console.log(
+    `   Video ID: ${song.encryptedVideoId || "?"}`
+  );
+});
   function findVideoViews(obj) {
   if (!obj || typeof obj !== "object") return null;
 
