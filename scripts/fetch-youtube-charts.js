@@ -147,9 +147,20 @@ const chartData = {
     viewCount: video.viewCount || null,
     thumbnail:
       video.thumbnail?.thumbnails?.at(-1)?.url || null
+    })),
+
+  weeklyTopSongs: bigbangSongs.map((song) => ({
+    rank: song.chartEntryMetadata?.currentPosition ?? null,
+    previousRank: song.chartEntryMetadata?.previousPosition ?? null,
+    title: song.name || "Untitled",
+    videoId: song.encryptedVideoId || "",
+    artists:
+      song.artists?.map((artist) => artist.name).filter(Boolean) || [],
+    viewCount: song.viewCount || null,
+    thumbnail:
+      song.thumbnail?.thumbnails?.at(-1)?.url || null
   }))
 };
-
 fs.mkdirSync("data", { recursive: true });
 fs.writeFileSync(
   "data/youtube-charts.json",
