@@ -1,4 +1,5 @@
 
+
 // South Korea · Weekly Top Music Videos
 const fs = require("node:fs");
 const COUNTRY = "kr";
@@ -102,6 +103,26 @@ bigbangSongs.forEach((song) => {
   );
   console.log(
     `   Video ID: ${song.encryptedVideoId || "?"}`
+  );
+});
+  const artistEntries =
+  data.contents?.sectionListRenderer?.contents?.[0]
+    ?.musicAnalyticsSectionRenderer?.content?.artists || [];
+
+const bigbangArtists = artistEntries.filter((artist) =>
+  artist.name?.toUpperCase() === "BIGBANG"
+);
+
+console.log("\n👑 KOREA · WEEKLY TOP ARTISTS");
+console.log(`Found ${artistEntries.length} artist entries`);
+
+bigbangArtists.forEach((artist) => {
+  console.log(
+    `#${artist.chartEntryMetadata?.currentPosition ?? "?"} ` +
+    `${artist.name || "Unknown"}`
+  );
+  console.log(
+    `   Previous: #${artist.chartEntryMetadata?.previousPosition ?? "?"}`
   );
 });
   function findVideoViews(obj) {
