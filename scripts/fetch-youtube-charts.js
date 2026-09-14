@@ -3,7 +3,7 @@
 // South Korea · Weekly Top Music Videos
 const fs = require("node:fs");
 const COUNTRY = "kr";
-
+const TARGET_ARTISTS = ["BIGBANG", "G-DRAGON", "TAEYANG", "DAESUNG"];
 async function fetchYouTubeCharts() {
   const url =
     "https://charts.youtube.com/youtubei/v1/browse" +
@@ -86,13 +86,15 @@ console.log(
   trackTypes.flatMap((item) => item.trackViews || []);
 
 const bigbangSongs = songEntries.filter((song) =>
-  song.artists?.some((artist) => artist.name === "BIGBANG")
+  song.artists?.some((artist) =>
+    TARGET_ARTISTS.includes(artist.name?.toUpperCase())
+  )
 );
 
 console.log("\n🎧 KOREA · WEEKLY TOP SONGS");
 console.log(`Found ${songEntries.length} song entries`);
 
-bigbangSongs.forEach((song) => {
+bigbangSongs.forEach((song) => 
   console.log(
     `#${song.chartEntryMetadata?.currentPosition ?? "?"} ` +
     `${song.artists?.map((artist) => artist.name).join(", ") || ""} - ` +
@@ -114,7 +116,7 @@ console.log(
   Object.keys(artistEntries[0] || {})
 );
 const bigbangArtists = artistEntries.filter((artist) =>
-  artist.name?.toUpperCase() === "BIGBANG"
+  TARGET_ARTISTS.includes(artist.name?.toUpperCase())
 );
 
 console.log("\n👑 KOREA · WEEKLY TOP ARTISTS");
@@ -161,8 +163,8 @@ const videos = findVideoViews(data);
   console.log(`Found ${videos.length} chart entries\n`);
 
  const bigbangVideos = videos.filter((video) =>
-  video.artists?.some(
-    (artist) => artist.name?.toUpperCase() === "BIGBANG"
+  video.artists?.some((artist) =>
+    TARGET_ARTISTS.includes(artist.name?.toUpperCase())
   )
 );
 const chartData = {
