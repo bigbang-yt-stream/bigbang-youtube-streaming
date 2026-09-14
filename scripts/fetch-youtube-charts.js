@@ -70,21 +70,28 @@ const videos = findVideoViews(data);
   console.log("🇰🇷 KOREA · WEEKLY TOP MUSIC VIDEOS");
   console.log(`Found ${videos.length} chart entries\n`);
 
-  videos.slice(0, 10).forEach((video, index) => {
-    const artists =
-      video.artists
-        ?.filter((artist) => artist.name)
-        .map((artist) => artist.name)
-        .join(", ") || "";
+ const bigbangVideos = videos.filter((video) =>
+  video.artists?.some(
+    (artist) => artist.name?.toUpperCase() === "BIGBANG"
+  )
+);
 
-    console.log(
-      `#${index + 1} ${video.title || video.name || "Untitled"}${
-        artists ? ` — ${artists}` : ""
-      }`
-    );
+console.log(`💛 Found ${bigbangVideos.length} BIGBANG chart entries\n`);
 
-    console.log(`   Video ID: ${video.id || ""}`);
-  });
+bigbangVideos.forEach((video) => {
+  const rank =
+    video.chartEntryMetadata?.currentPosition ?? "?";
+
+  const previous =
+    video.chartEntryMetadata?.previousPosition ?? "?";
+
+  console.log(
+    `#${rank} ${video.title || video.name || "Untitled"}`
+  );
+
+  console.log(`   Previous: #${previous}`);
+  console.log(`   Video ID: ${video.id || ""}`);
+}); 
 }
 
 fetchYouTubeCharts().catch((error) => {
