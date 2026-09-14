@@ -1,6 +1,6 @@
 // YouTube Charts test
 // South Korea · Weekly Top Music Videos
-
+const fs = require("node:fs");
 const COUNTRY = "kr";
 
 async function fetchYouTubeCharts() {
@@ -75,7 +75,30 @@ const videos = findVideoViews(data);
     (artist) => artist.name?.toUpperCase() === "BIGBANG"
   )
 );
+const chartData = {
+  generatedAt: new Date().toISOString(),
+  country: "KR",
+  chart: "weekly-top-music-videos",
+  entries: bigbangVideos.map((video) => ({
+    rank: video.chartEntryMetadata?.currentPosition ?? null,
+    previousRank: video.chartEntryMetadata?.previousPosition ?? null,
+    title: video.title || video.name || "Untitled",
+    videoId: video.id || "",
+    artists:
+      video.artists?.map((artist) => artist.name).filter(Boolean) || [],
+    viewCount: video.viewCount || null,
+    thumbnail:
+      video.thumbnail?.thumbnails?.at(-1)?.url || null
+  }))
+};
 
+fs.mkdirSync("data", { recursive: true });
+fs.writeFileSync(
+  "data/youtube-charts.json",
+  JSON.stringify(chartData, null, 2)
+);
+
+console.log("✅ Saved data/youtube-charts.json");
 console.log(`💛 Found ${bigbangVideos.length} BIGBANG chart entries\n`);
 
 bigbangVideos.forEach((video) => {
