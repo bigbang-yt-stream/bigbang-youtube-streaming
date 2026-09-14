@@ -119,7 +119,14 @@ const bigbangArtists = artistEntries.filter((artist) =>
 
 console.log("\n👑 KOREA · WEEKLY TOP ARTISTS");
 console.log(`Found ${artistEntries.length} artist entries`);
-
+console.log(
+  "MEMBER NAME CHECK:",
+  artistEntries
+    .map((artist) => artist.name)
+    .filter((name) =>
+      /BIGBANG|G-DRAGON|TAEYANG|DAESUNG/i.test(name || "")
+    )
+);
 bigbangArtists.forEach((artist) => {
   console.log(
     `#${artist.chartEntryMetadata?.currentPosition ?? "?"} ` +
