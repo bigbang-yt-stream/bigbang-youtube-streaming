@@ -105,9 +105,10 @@ bigbangSongs.forEach((song) => {
     `   Video ID: ${song.encryptedVideoId || "?"}`
   );
 });
-  const artistEntries =
+ const artistEntries =
   data.contents?.sectionListRenderer?.contents?.[0]
-    ?.musicAnalyticsSectionRenderer?.content?.artists || [];
+    ?.musicAnalyticsSectionRenderer?.content?.artists?.[0]
+    ?.artistViews || []; 
 console.log(
   "ARTIST OBJECT KEYS:",
   Object.keys(artistEntries[0] || {})
