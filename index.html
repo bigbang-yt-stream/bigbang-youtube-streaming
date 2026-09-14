@@ -363,42 +363,17 @@ footer{
 
 <h2 id="chart">📊 WEEKLY YOUTUBE CHART</h2>
 
-<div class="card chart">
-<div>
-<b>BiiiG DANCE PRACTICE</b>
-<div class="small">Weekly Music Video Chart</div>
-</div>
-<div>
-<span class="rank">#3</span>
-<span class="up"> ↑2</span>
-</div>
-</div>
-
-<div class="card chart">
-<div>
-<b>BiiiG M/V</b>
-<div class="small">Weekly Music Video Chart</div>
-</div>
-<div>
-<span class="rank">#4</span>
-<span class="down"> ↓1</span>
-</div>
-</div>
-
-<div class="card chart">
-<div>
-<b>LAST DANCE M/V</b>
-<div class="small">Weekly Music Video Chart</div>
-</div>
-<div>
-<span class="rank">#43</span>
-<span class="up"> ↑54</span>
-</div>
-</div>
-
 <p class="small">
-Updated 2026.09.11
+  South Korea · Weekly YouTube Music Charts
 </p>
+
+<div id="youtube-chart">
+  <div class="card">
+    <div class="small">YouTube 차트 데이터를 불러오는 중...</div>
+  </div>
+</div>
+
+<p class="small" id="youtube-chart-updated"></p>
 
 <h2 id="guide">📖 STREAMING GUIDE</h2>
 
@@ -825,6 +800,90 @@ BIGBANG YouTube Streaming Hub
 </footer>
 
 </div>
+<script>
+fetch("data/youtube-charts.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Chart data could not be loaded.");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    const chartBox = document.getElementById("youtube-chart");
+    const updatedBox = document.getElementById("youtube-chart-updated");
 
+    const musicVideos = data.entries || [];
+    const topSongs = data.weeklyTopSongs || [];
+    const topArtists = data.weeklyTopArtists || [];
+    function movement(item) {
+      if (!item.previousRank) return "NEW";
+      if (item.rank < item.previousRank) {
+        return `↑ ${item.previousRank - item.rank}`;
+      }
+      if (item.rank > item.previousRank) {
+        return `↓ ${item.rank - item.previousRank}`;
+      }
+      return "—";
+    }
+
+    function renderChart(title, items, type) {
+      let html = `<h3>${title}</h3>`;
+
+      if (!items.length) {
+        html += `
+          <div class="card">
+            <div class="small">이번 주 차트 진입 항목이 없습니다.</div>
+          </div>
+        `;
+        return html;
+      }
+
+      items.forEach((item) => {
+        const name = type === "artist" ? item.name : item.title;
+        const artist =
+          type === "artist" ? "" : (item.artists || []).join(" · ");
+
+        html += `
+          <div class="card chart">
+            <div>
+              <b>${name}</b>
+              ${artist ? `<div class="small">${artist}</div>` : ""}
+            </div>
+            <div>
+              <span class="rank">#${item.rank}</span>
+              <span>${movement(item)}</span>
+            </div>
+          </div>
+        `;
+      });
+
+      return html;
+    }
+        chartBox.innerHTML =
+      renderChart("🎬 TOP MUSIC VIDEOS", musicVideos, "video") +
+      renderChart("🎧 TOP SONGS", topSongs, "song") +
+      renderChart("👑 TOP ARTISTS", topArtists, "artist");
+
+    if (data.generatedAt) {
+      const updated = new Date(data.generatedAt);
+      updatedBox.textContent =
+        `Data fetched ${updated.toLocaleDateString("ko-KR")}`;
+    }
+  })
+  .catch((error) => {
+    console.error(error);
+
+    const chartBox = document.getElementById("youtube-chart");
+
+    chartBox.innerHTML = `
+      <div class="card">
+        <div class="small">
+          차트 데이터를 불러오지 못했습니다.<br>
+          잠시 후 다시 확인해주세요.
+        </div>
+      </div>
+    `;
+  });
+        </script>
 </body>
 </html>
