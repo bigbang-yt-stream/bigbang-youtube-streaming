@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-09-14T07:47:06.121Z",
+  "country": "KR",
+  "chart": "weekly-top-music-videos",
+  "entries": [
+    {
+      "rank": 11,
+      "previousRank": 4,
+      "title": "BIGBANG - ‘BiiiG’ M/V",
+      "videoId": "L8ZnXgbyUuc",
+      "artists": [
+        "BIGBANG"
+      ],
+      "viewCount": "487049",
+      "thumbnail": "https://i.ytimg.com/vi/L8ZnXgbyUuc/maxresdefault.jpg"
+    },
+    {
+      "rank": 22,
+      "previousRank": 3,
+      "title": "BIGBANG - ‘BiiiG’ DANCE PRACTICE",
+      "videoId": "B5u8JiGVI_k",
+      "artists": [
+        "BIGBANG"
+      ],
+      "viewCount": "309789",
+      "thumbnail": "https://i.ytimg.com/vi/B5u8JiGVI_k/maxresdefault.jpg"
+    },
+    {
+      "rank": 71,
+      "previousRank": null,
+      "title": "뱅뱅뱅",
+      "videoId": "2ips2mM7Zqw",
+      "artists": [
+        "BIGBANG"
+      ],
+      "viewCount": "130814",
+      "thumbnail": "https://i.ytimg.com/vi/2ips2mM7Zqw/maxresdefault.jpg"
+    }
+  ]
+}
