@@ -18,3 +18,11 @@ jobs:
 
       - name: Test Korea Weekly Top Music Videos
         run: node scripts/fetch-youtube-charts.js
+
+      - name: Commit updated chart data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/youtube-charts.json
+          git diff --cached --quiet || git commit -m "Update YouTube chart data"
+          git push
