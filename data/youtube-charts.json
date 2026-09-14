@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T18:49:09.399Z",
+  "generatedAt": "2026-09-14T22:37:10.052Z",
   "country": "KR",
   "chart": "weekly-top-music-videos",
   "entries": [
@@ -103,6 +103,16 @@
       ],
       "viewCount": "386394",
       "thumbnail": "https://i.ytimg.com/vi/VvXVuWwAG90/maxresdefault.jpg"
+    }
+  ],
+  "weeklyTopArtists": [
+    {
+      "rank": 1,
+      "previousRank": 1,
+      "name": "BIGBANG",
+      "channelId": "UCzw-C7fNfs018R1FzIKnlaA",
+      "viewCount": "13276571",
+      "thumbnail": "https://yt3.googleusercontent.com/X4IlIyw4Yjpl2qio5QA-uxj5vIa_EVSg5dyibJrmKcPrj0BKFcKYhKUTyacNbHaGHxP_zVYB3jv-Cv0"
     }
   ]
 }
