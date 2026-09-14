@@ -59,6 +59,13 @@ async function fetchYouTubeCharts() {
   "FIRST SECTION KEYS:",
   Object.keys(data.contents?.sectionListRenderer?.contents?.[0] || {})
 );
+  console.log(
+  "MUSIC ANALYTICS KEYS:",
+  Object.keys(
+    data.contents?.sectionListRenderer?.contents?.[0]
+      ?.musicAnalyticsSectionRenderer || {}
+  )
+);
   function findVideoViews(obj) {
   if (!obj || typeof obj !== "object") return null;
 
