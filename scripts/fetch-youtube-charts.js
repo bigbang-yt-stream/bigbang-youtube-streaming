@@ -1,4 +1,4 @@
-// YouTube Charts test
+console.log("CONTENTS KEYS:", Object.keys(data.contents || {}));// YouTube Charts test
 // South Korea · Weekly Top Music Videos
 const fs = require("node:fs");
 const COUNTRY = "kr";
@@ -50,6 +50,14 @@ async function fetchYouTubeCharts() {
   console.log(
   "SECTION KEYS:",
   Object.keys(data.contents?.sectionListRenderer || {})
+);
+  console.log(
+  "SECTION CONTENT COUNT:",
+  data.contents?.sectionListRenderer?.contents?.length
+);
+  console.log(
+  "FIRST SECTION KEYS:",
+  Object.keys(data.contents?.sectionListRenderer?.contents?.[0] || {})
 );
   function findVideoViews(obj) {
   if (!obj || typeof obj !== "object") return null;
