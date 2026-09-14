@@ -108,7 +108,10 @@ bigbangSongs.forEach((song) => {
   const artistEntries =
   data.contents?.sectionListRenderer?.contents?.[0]
     ?.musicAnalyticsSectionRenderer?.content?.artists || [];
-
+console.log(
+  "ARTIST OBJECT KEYS:",
+  Object.keys(artistEntries[0] || {})
+);
 const bigbangArtists = artistEntries.filter((artist) =>
   artist.name?.toUpperCase() === "BIGBANG"
 );
