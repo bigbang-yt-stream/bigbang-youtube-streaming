@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T22:45:36.819Z",
+  "generatedAt": "2026-09-14T23:14:01.983Z",
   "country": "KR",
   "chart": "weekly-top-music-videos",
   "entries": [
@@ -83,6 +83,17 @@
       "thumbnail": "https://i.ytimg.com/vi/2ips2mM7Zqw/maxresdefault.jpg"
     },
     {
+      "rank": 77,
+      "previousRank": 76,
+      "title": "CROOKED",
+      "videoId": "RKhsHGfrFmY",
+      "artists": [
+        "G-DRAGON"
+      ],
+      "viewCount": "437802",
+      "thumbnail": "https://i.ytimg.com/vi/RKhsHGfrFmY/maxresdefault.jpg"
+    },
+    {
       "rank": 80,
       "previousRank": 83,
       "title": "거짓말",
@@ -113,6 +124,14 @@
       "channelId": "UCzw-C7fNfs018R1FzIKnlaA",
       "viewCount": "13276571",
       "thumbnail": "https://yt3.googleusercontent.com/X4IlIyw4Yjpl2qio5QA-uxj5vIa_EVSg5dyibJrmKcPrj0BKFcKYhKUTyacNbHaGHxP_zVYB3jv-Cv0"
+    },
+    {
+      "rank": 16,
+      "previousRank": 14,
+      "name": "G-DRAGON",
+      "channelId": "UCeU5qTuBiqTU5z-hyL6WITQ",
+      "viewCount": "5266564",
+      "thumbnail": "https://lh3.googleusercontent.com/QF5_9GNj1eOdWzO2V9b26JhoLwNDG0PwOlbOdHlcyUHUAoSjRBrzHxodlLj6O-cj6mKLYN6tjRfZ6A"
     }
   ]
 }
