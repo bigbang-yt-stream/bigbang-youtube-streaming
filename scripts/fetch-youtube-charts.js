@@ -94,7 +94,7 @@ const bigbangSongs = songEntries.filter((song) =>
 console.log("\n🎧 KOREA · WEEKLY TOP SONGS");
 console.log(`Found ${songEntries.length} song entries`);
 
-bigbangSongs.forEach((song) => 
+bigbangSongs.forEach((song) => {
  console.log(
   `#${song.chartEntryMetadata?.currentPosition ?? "?"} ` +
   `${song.artists?.map((artist) => artist.name).join(", ") || ""} - ` +
