@@ -95,11 +95,11 @@ console.log("\n🎧 KOREA · WEEKLY TOP SONGS");
 console.log(`Found ${songEntries.length} song entries`);
 
 bigbangSongs.forEach((song) => 
-  console.log(
-    `#${song.chartEntryMetadata?.currentPosition ?? "?"} ` +
-    `${song.artists?.map((artist) => artist.name).join(", ") || ""} - ` +
-    `${song.name || "Untitled"}`
-  );
+ console.log(
+  `#${song.chartEntryMetadata?.currentPosition ?? "?"} ` +
+  `${song.artists?.map((artist) => artist.name).join(", ") || ""} - ` +
+  `${song.name || "Untitled"}`
+); 
   console.log(
     `   Previous: #${song.chartEntryMetadata?.previousPosition ?? "?"}`
   );
