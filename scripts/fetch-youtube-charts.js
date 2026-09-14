@@ -1,4 +1,4 @@
-console.log("CONTENTS KEYS:", Object.keys(data.contents || {}));// YouTube Charts test
+
 // South Korea · Weekly Top Music Videos
 const fs = require("node:fs");
 const COUNTRY = "kr";
