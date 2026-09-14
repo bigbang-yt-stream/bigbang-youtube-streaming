@@ -1,0 +1,84 @@
+// YouTube Charts test
+// South Korea · Weekly Top Music Videos
+
+const COUNTRY = "kr";
+
+async function fetchYouTubeCharts() {
+  const url =
+    "https://charts.youtube.com/youtubei/v1/browse" +
+    "?alt=json" +
+    "&key=AIzaSyCzEW7JUJdSql0-2V4tHUb6laYm4iAE_dM";
+
+  const body = {
+    browseId: "FEmusic_analytics_charts_home",
+    context: {
+      capabilities: {},
+      client: {
+        clientName: "WEB_MUSIC_ANALYTICS",
+        clientVersion: "0.2",
+        experimentIds: [],
+        experimentsToken: "",
+        gl: "US",
+        hl: "en",
+        theme: "MUSIC"
+      },
+      request: {
+        internalExperimentFlags: []
+      }
+    },
+    query:
+      `chart_params_type=WEEK&perspective=CHART&flags=viral_video_chart&selected_chart=TRACKS&chart_params_id=weekly:0:0:${COUNTRY}`
+  };
+
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  });
+
+  if (!response.ok) {
+    throw new Error(
+      `YouTube Charts request failed: ${response.status} ${response.statusText}`
+    );
+  }
+
+  const data = await response.json();
+
+  const content =
+    data?.contents?.sectionListRenderer?.contents?.[0]
+      ?.musicAnalyticsSectionRenderer;
+
+  const videos = content?.videos?.[0]?.videoViews;
+
+  if (!Array.isArray(videos)) {
+    console.log(JSON.stringify(data, null, 2));
+    throw new Error("Top Music Videos data was not found.");
+  }
+
+  console.log("🇰🇷 KOREA · WEEKLY TOP MUSIC VIDEOS");
+  console.log(`Found ${videos.length} chart entries\n`);
+
+  videos.slice(0, 10).forEach((video, index) => {
+    const artists =
+      video.artists
+        ?.filter((artist) => artist.name)
+        .map((artist) => artist.name)
+        .join(", ") || "";
+
+    console.log(
+      `#${index + 1} ${video.title || video.name || "Untitled"}${
+        artists ? ` — ${artists}` : ""
+      }`
+    );
+
+    console.log(`   Video ID: ${video.id || ""}`);
+  });
+}
+
+fetchYouTubeCharts().catch((error) => {
+  console.error("❌ TEST FAILED");
+  console.error(error);
+  process.exit(1);
+});
