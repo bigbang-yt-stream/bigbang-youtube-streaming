@@ -184,6 +184,15 @@ const chartData = {
     viewCount: song.viewCount || null,
     thumbnail:
       song.thumbnail?.thumbnails?.at(-1)?.url || null
+  })),
+  weeklyTopArtists: bigbangArtists.map((artist) => ({
+    rank: artist.chartEntryMetadata?.currentPosition ?? null,
+    previousRank: artist.chartEntryMetadata?.previousPosition ?? null,
+    name: artist.name || "Unknown",
+    channelId: artist.externalChannelId || "",
+    viewCount: artist.viewCount || null,
+    thumbnail:
+      artist.thumbnail?.thumbnails?.at(-1)?.url || null
   }))
 };
 fs.mkdirSync("data", { recursive: true });
