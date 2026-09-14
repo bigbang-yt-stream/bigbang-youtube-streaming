@@ -46,12 +46,22 @@ async function fetchYouTubeCharts() {
 
   const data = await response.json();
 
-  const content =
-    data?.contents?.sectionListRenderer?.contents?.[0]
-      ?.musicAnalyticsSectionRenderer;
+  function findVideoViews(obj) {
+  if (!obj || typeof obj !== "object") return null;
 
-  const videos = content?.videos?.[0]?.videoViews;
+  if (Array.isArray(obj.videoViews)) {
+    return obj.videoViews;
+  }
 
+  for (const value of Object.values(obj)) {
+    const found = findVideoViews(value);
+    if (found) return found;
+  }
+
+  return null;
+}
+
+const videos = findVideoViews(data);
   if (!Array.isArray(videos)) {
     console.log(JSON.stringify(data, null, 2));
     throw new Error("Top Music Videos data was not found.");
