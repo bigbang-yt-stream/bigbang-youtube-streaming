@@ -47,6 +47,10 @@ async function fetchYouTubeCharts() {
   const data = await response.json();
   console.log("TOP LEVEL KEYS:", Object.keys(data));
   console.log("CONTENTS KEYS:", Object.keys(data.contents || {}));
+  console.log(
+  "SECTION KEYS:",
+  Object.keys(data.contents?.sectionListRenderer || {})
+);
   function findVideoViews(obj) {
   if (!obj || typeof obj !== "object") return null;
 
