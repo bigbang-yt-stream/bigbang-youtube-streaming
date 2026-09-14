@@ -73,6 +73,15 @@ async function fetchYouTubeCharts() {
       ?.musicAnalyticsSectionRenderer?.content || {}
   )
 );
+  console.log(
+  "TRACK TYPES:",
+  JSON.stringify(
+    data.contents?.sectionListRenderer?.contents?.[0]
+      ?.musicAnalyticsSectionRenderer?.content?.trackTypes,
+    null,
+    2
+  )
+);
   function findVideoViews(obj) {
   if (!obj || typeof obj !== "object") return null;
 
