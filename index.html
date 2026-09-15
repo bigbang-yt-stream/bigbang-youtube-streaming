@@ -849,7 +849,7 @@ fetch("data/youtube-charts.json")
               <b>${name}</b>
               ${artist ? `<div class="small">${artist}</div>` : ""}
             </div>
-            <div>
+            <div style="display:flex;align-items:center;gap:8px;white-space:nowrap;">
               <span class="rank">#${item.rank}</span>
               <span style="font-size:0.78em;color:#aaa;white-space:nowrap;">${movement(item)}</span>
             </div>
