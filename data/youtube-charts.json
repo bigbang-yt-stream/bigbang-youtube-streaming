@@ -1,136 +1,92 @@
 {
-  "generatedAt": "2026-09-14T23:14:01.983Z",
+  "generatedAt": "2026-09-22T19:42:02.937Z",
   "country": "KR",
   "chart": "weekly-top-music-videos",
   "entries": [
     {
-      "rank": 11,
-      "previousRank": 4,
+      "rank": 22,
+      "previousRank": null,
+      "title": "BIGBANG - ‘BiiiG’ LIVE PERFORMANCE | BIGBANG 2026-2027 WORLD TOUR [ XX : COSMOS ] IN GOYANG",
+      "videoId": "YA1IK2HzmGw",
+      "artists": [
+        "BIGBANG"
+      ],
+      "viewCount": "405494",
+      "thumbnail": "https://i.ytimg.com/vi/YA1IK2HzmGw/maxresdefault.jpg"
+    },
+    {
+      "rank": 30,
+      "previousRank": 11,
       "title": "BIGBANG - ‘BiiiG’ M/V",
       "videoId": "L8ZnXgbyUuc",
       "artists": [
         "BIGBANG"
       ],
-      "viewCount": "487049",
+      "viewCount": "294354",
       "thumbnail": "https://i.ytimg.com/vi/L8ZnXgbyUuc/maxresdefault.jpg"
     },
     {
-      "rank": 22,
-      "previousRank": 3,
+      "rank": 51,
+      "previousRank": 22,
       "title": "BIGBANG - ‘BiiiG’ DANCE PRACTICE",
       "videoId": "B5u8JiGVI_k",
       "artists": [
         "BIGBANG"
       ],
-      "viewCount": "309789",
+      "viewCount": "201026",
       "thumbnail": "https://i.ytimg.com/vi/B5u8JiGVI_k/maxresdefault.jpg"
     },
     {
-      "rank": 71,
+      "rank": 78,
       "previousRank": null,
-      "title": "뱅뱅뱅",
-      "videoId": "2ips2mM7Zqw",
+      "title": "HARU HARU(하루하루)",
+      "videoId": "MzCbEdtNbJ0",
       "artists": [
         "BIGBANG"
       ],
-      "viewCount": "130814",
-      "thumbnail": "https://i.ytimg.com/vi/2ips2mM7Zqw/maxresdefault.jpg"
+      "viewCount": "126344",
+      "thumbnail": "https://i.ytimg.com/vi/MzCbEdtNbJ0/maxresdefault.jpg"
     }
   ],
   "weeklyTopSongs": [
     {
-      "rank": 8,
-      "previousRank": 1,
+      "rank": 11,
+      "previousRank": 8,
       "title": "BiiiG",
       "videoId": "B5u8JiGVI_k",
       "artists": [
         "BIGBANG"
       ],
-      "viewCount": "2569926",
+      "viewCount": "2273149",
       "thumbnail": "https://i.ytimg.com/vi/B5u8JiGVI_k/maxresdefault.jpg"
     },
     {
-      "rank": 44,
-      "previousRank": 41,
-      "title": "하루하루",
-      "videoId": "MzCbEdtNbJ0",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "767772",
-      "thumbnail": "https://i.ytimg.com/vi/MzCbEdtNbJ0/maxresdefault.jpg"
-    },
-    {
-      "rank": 64,
-      "previousRank": 71,
+      "rank": 79,
+      "previousRank": 64,
       "title": "Blue",
       "videoId": "2GRP1rkE4O0",
       "artists": [
         "BIGBANG"
       ],
-      "viewCount": "486779",
+      "viewCount": "489879",
       "thumbnail": "https://i.ytimg.com/vi/2GRP1rkE4O0/maxresdefault.jpg"
-    },
-    {
-      "rank": 69,
-      "previousRank": 74,
-      "title": "뱅뱅뱅",
-      "videoId": "2ips2mM7Zqw",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "463627",
-      "thumbnail": "https://i.ytimg.com/vi/2ips2mM7Zqw/maxresdefault.jpg"
-    },
-    {
-      "rank": 77,
-      "previousRank": 76,
-      "title": "CROOKED",
-      "videoId": "RKhsHGfrFmY",
-      "artists": [
-        "G-DRAGON"
-      ],
-      "viewCount": "437802",
-      "thumbnail": "https://i.ytimg.com/vi/RKhsHGfrFmY/maxresdefault.jpg"
-    },
-    {
-      "rank": 80,
-      "previousRank": 83,
-      "title": "거짓말",
-      "videoId": "2Cv3phvP8Ro",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "432896",
-      "thumbnail": "https://i.ytimg.com/vi/2Cv3phvP8Ro/maxresdefault.jpg"
-    },
-    {
-      "rank": 91,
-      "previousRank": 78,
-      "title": "IF YOU (Live)",
-      "videoId": "VvXVuWwAG90",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "386394",
-      "thumbnail": "https://i.ytimg.com/vi/VvXVuWwAG90/maxresdefault.jpg"
     }
   ],
   "weeklyTopArtists": [
     {
-      "rank": 1,
+      "rank": 3,
       "previousRank": 1,
       "name": "BIGBANG",
       "channelId": "UCzw-C7fNfs018R1FzIKnlaA",
-      "viewCount": "13276571",
+      "viewCount": "12190695",
       "thumbnail": "https://yt3.googleusercontent.com/X4IlIyw4Yjpl2qio5QA-uxj5vIa_EVSg5dyibJrmKcPrj0BKFcKYhKUTyacNbHaGHxP_zVYB3jv-Cv0"
     },
     {
-      "rank": 16,
-      "previousRank": 14,
+      "rank": 28,
+      "previousRank": 16,
       "name": "G-DRAGON",
       "channelId": "UCeU5qTuBiqTU5z-hyL6WITQ",
-      "viewCount": "5266564",
+      "viewCount": "4704013",
       "thumbnail": "https://lh3.googleusercontent.com/QF5_9GNj1eOdWzO2V9b26JhoLwNDG0PwOlbOdHlcyUHUAoSjRBrzHxodlLj6O-cj6mKLYN6tjRfZ6A"
     }
   ]
