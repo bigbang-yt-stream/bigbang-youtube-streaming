@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIGBANG YouTube Streaming</title>
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link rel="manifest" href="manifest.webmanifest">
+  <style>
+body{
+  margin:0;
+  background:#090909;
+  color:#fff;
+  font-family:Arial,"Noto Sans KR",sans-serif;
+}
+
+.wrap{
+  max-width:900px;
+  margin:auto;
+  padding:24px;
+}
+
+header{
+  padding:45px 0 30px;
+  border-bottom:1px solid #333;
+}
+.hero-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  text-align:center;
+}
+
+.hero-side{
+  color:#d6a900;
+  font-size:16px;
+  font-style:italic;
+  font-weight:bold;
+  line-height:1.3;
+  width:25%;
+}
+
+.hero-center{
+  flex:1;
+}
+
+.hero-crown{
+  position:relative;
+  width:54px;
+  height:32px;
+  margin:0 auto 1px;
+}
+
+.hero-crown::before{
+  content:"";
+  position:absolute;
+  left:4px;
+  bottom:0;
+  width:46px;
+  height:27px;
+  background:#ffd400;
+  clip-path:polygon(
+    0 18%,
+    25% 58%,
+    50% 0,
+    75% 58%,
+    100% 18%,
+    88% 100%,
+    12% 100%
+  );
+}
+
+
+.hero-title{
+  color:#fff;
+  font-family:"Arial Black","Arial Narrow",Arial,sans-serif;
+  font-size:52px;
+  font-weight:900;
+  font-stretch:condensed;
+  letter-spacing:1px;
+  line-height:0.9;
+  transform:scaleX(1.08);
+  margin:2px 0 14px;
+
+  background:linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fffdf2 38%,
+    #ffe9a3 62%,
+    #ffd04a 82%,
+    #e9ad00 100%
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+
+  filter:
+    drop-shadow(0 3px 0 #1c1c1c)
+    drop-shadow(0 0 8px rgba(255,212,0,0.28));
+}
+
+  .hero-side{
+    font-size:12px;
+    width:24%;
+  }
+
+  .hero-title{
+    font-size:40px;
+  }
+
+  .hero-tagline{
+    font-size:8px;
+    letter-spacing:2px;
+  }
+}
+.yellow{
+  color:#ffd400;
+  font-weight:bold;
+}
+
+h1{
+  font-size:38px;
+  margin:8px 0;
+}
+
+h2{
+  margin-top:35px;
+}
+
+.card{
+  background:#151515;
+  border:1px solid #333;
+  border-radius:15px;
+  padding:18px;
+  margin:12px 0;
+}
+
+button,.button{
+  display:inline-block;
+  background:#ffd400;
+  color:#000;
+  padding:11px 18px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:10px;
+}
+.top-nav{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.nav-button{
+  display:inline-block;
+  background:transparent;
+  color:#ffd400;
+  padding:10px 14px;
+  border:2px solid #ffd400;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:14px;
+}
+.chart{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.rank{
+  font-size:24px;
+  font-weight:bold;
+}
+
+.up{color:#70d68b;}
+.down{color:#ff8585;}
+
+.small{
+  color:#999;
+  font-size:13px;
+}
+
+footer{
+  margin-top:45px;
+  padding:25px 0;
+  border-top:1px solid #333;
+  color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<header>
+  <div class="hero-row">
+
+    <div class="hero-side">
+      Still We are<br>BIGBANG
+    </div>
+
+    <div class="hero-center">
+      <div class="hero-crown"></div>
+      <div class="hero-title">BIGBANG</div>
+      <div class="hero-tagline">YOUTUBE STREAMING HUB</div>
+    </div>
+
+    <div class="hero-side">
+      VIP<br>Always Here♡
+    </div>
+
+  </div>
+</header>
+
+<div class="top-nav">
+
+<a class="nav-button" href="#video"> VIDEO</a>
+<a class="nav-button" href="#audio"> AUDIO</a>
+<a class="nav-button" href="#chart"> CHART</a>
+<a class="nav-button" href="#guide"> GUIDE</a>
+<a class="nav-button" href="#archive"> ARCHIVE</a>
+</div>
+<!-- VIP PICK QUICK LINK -->
+<a href="#vip-pick"
+   style="display:block;text-decoration:none;margin:12px 0 18px;color:#ffd400;">
+  <div class="card" style="padding:14px 16px;margin:0;">
+    <div style="display:flex;align-items:center;justify-content:space-between;
+                gap:12px;color:#ffd400;font-weight:bold;">
+      <span>💌 HUB OPENING PICK · <span style="white-space:nowrap;">LAST DANCE</span></span>
+      <span style="white-space:nowrap;font-size:0.85em;">VIEW →</span>
+    </div>
+  </div>
+</a>
+<!-- ABOUT THIS HUB -->
+<section id="about">
+<div class="card">
+    <div class="yellow"> ABOUT THIS HUB</div>
+
+    <h3>Made by VIP, for VIP.</h3>
+    <p class="small">BIGBANG Official Video Archive &amp; Fan Participation Hub</p>
+
+    <details>
+      <summary class="yellow"> 이 허브에 대해 더 알아보기</summary>
+
+      <p class="small">
+  BIGBANG의 공식 YouTube 콘텐츠를 한곳에서 쉽게 만나고,<br>
+  오래된 영상부터 지금의 활동까지 함께 다시 발견할 수 있도록<br>
+  한 명의 VIP가 만들고 운영하는 비공식 팬 프로젝트입니다.<br><br>
+
+  이곳은 단순히 영상을 모아두는 아카이브를 넘어,<br>
+  <strong>좋아하는 음악과 영상을 발견하고, 다시 보고,
+  서로 추천하며 함께 채워가는 공간</strong>을 지향합니다.<br><br>
+
+  오랜 시간 BIGBANG과 함께해 온 VIP는 물론,<br>
+  멤버들의 음악을 좋아하는 팬과 BIGBANG의 음악을 새롭게 알게 된 누구나<br>
+  부담 없이 찾아와 음악과 영상을 즐길 수 있기를 바랍니다. 💛<br><br>
+
+  보고 싶은 공식 영상을 추천하고, 새로운 영상을 발견하고,<br>
+  다시 보고 싶은 순간들을 함께 나누며<br>
+  <strong>BIGBANG의 음악과 영상이 오래도록 이어질 수 있기를 바랍니다.</strong><br><br>
+
+  스트리밍 가이드·플레이리스트·차트 등의 정보는<br>
+  공식 콘텐츠를 보다 편리하게 만나고 즐길 수 있도록 돕는<br>
+  참고 자료로 제공합니다.
+      </p>
+
+      <p class="small">
+        <strong>Independent fan project · Not affiliated with or operated by
+        BIGBANG or its official management.</strong>
+      </p>
+    </details>
+  </div>
+</section>
+<section id="video">
+<h2>🔥 NOW STREAMING — VIDEO</h2>
+
+<div class="card">
+<div class="yellow">NOW STREAMING</div>
+<h3>BIGBANG – BiiiG M/V</h3>
+<p class="small">BiiiG Official Music Video</p>
+<a class="button" href="https://youtu.be/L8ZnXgbyUuc" target="_blank">▶ WATCH</a>
+</div>
+
+<div class="card">
+<div class="yellow">WEEKLY CHART</div>
+<h3>BIGBANG – BiiiG DANCE PRACTICE</h3>
+<p class="small">Official Dance Practice</p>
+<a class="button" href="https://youtu.be/B5u8JiGVI_k?si=kB0ynUgJoyHS4F_1" target="_blank">▶ WATCH</a>
+</div>
+
+<div class="card">
+<div class="yellow">NOW STREAMING</div>
+<h3>TAEYANG – LIVE FAST DIE SLOW M/V</h3>
+<p class="small">Official Music Video</p>
+<a class="button" href="https://youtu.be/pB3W-k0kQ8U?si=a_e4Ds8LbThiSZjC" target="_blank">▶ WATCH</a>
+</div>
+</section>
+
+<h2>🎬 MV STREAMING PLAYLIST</h2>
+
+<div class="card">
+  <div class="yellow">VIP PLAYLIST</div>
+  <h3>BIGBANG & MEMBERS</h3>
+  <p>BIGBANG YT HUB · 17개 영상 · 59분 58초</p>
+  <p class="small">Official MVs, Performance & Dance Videos</p>
+  <a class="button" href="https://youtube.com/playlist?list=PLcqZDnwxnVXg&si=PCCK8GOoiPVawTTZ" target="_blank">▶ PLAY ON YOUTUBE</a>
+</div>
+  
+<section id="audio">
+
+<h2> NOW STREAMING — AUDIO</h2>
+
+<div class="card">
+
+<h3>BIGBANG – BiiiG</h3>
+<p class="small">YouTube Music Audio Streaming</p>
+<a class="button" href="https://music.youtube.com/playlist?list=OLAK5uy_m7JOR-s-vjUKVIkOePjQ5ypAwcsNAhkQ4&si=5-klPMCxTpc1WJ_o" target="_blank">▶ LISTEN</a>
+</div>
+
+<h3> YOUTUBE MUSIC PLAYLISTS</h3>
+
+<p class="small">
+  BIGBANG의 음악과 멤버들의 음악을 함께 즐길 수 있는<br>
+  YouTube Music 플레이리스트입니다.
+</p>
+
+
+<div class="card">
+
+  <h3>BIGBANG YouTube Music Playlist</h3>
+  <p class="small">
+    BIGBANG YT HUB · 90곡 · 5시간 10분
+  </p>
+  <a class="button"
+     href="https://music.youtube.com/playlist?list=PLvLDfIwfYkMYHx6swTae0luqFb2i5MtmZ&si=VN_Nt4X4aifoty4R"
+     target="_blank">▶ OPEN PLAYLIST</a>
+</div>
+
+</section>
+
+<h2 id="chart">📊 WEEKLY YOUTUBE CHART</h2>
+
+<p class="small">
+  South Korea · Weekly YouTube Music Charts
+</p>
+
+<div id="youtube-chart">
+  <div class="card">
+    <div class="small">YouTube 차트 데이터를 불러오는 중...</div>
+  </div>
+</div>
+
+<p class="small" id="youtube-chart-updated"></p>
+
+<h2 id="guide">📖 STREAMING GUIDE</h2>
+
+<div class="card">
+  <div class="yellow"> MV STREAMING GUIDE</div>
+  <h3>Official M/V 시청 가이드</h3>
+
+  <p class="small">
+    <strong>BiiiG Official M/V</strong><br>
+    검색어: BIGBANG BiiiG<br>
+    공식 채널: BIGBANG
+  </p>
+
+  <p class="small">
+    <strong>LIVE FAST DIE SLOW Official M/V</strong><br>
+    검색어: TAEYANG LIVE FAST DIE SLOW<br>
+    공식 채널: THEBLACKLABEL
+  </p>
+
+  <p class="small">
+    ✔ 공식 채널의 Official M/V 확인<br>
+    ✔ 처음부터 끝까지 정상 재생<br>
+    ✔ 재생속도 기본 1x 권장<br>
+    ✔ 화질 720p 이상 권장<br>
+    ✔ 자동재생 OFF 권장<br>
+    ✔ 재생바 반복 이동·과도한 연속 반복 지양<br>
+    ✔ 좋아요·댓글·공유 등 일반적인 방식으로 참여
+  </p>
+
+  <p class="small">
+    <strong>💡 팬 스트리밍 참고</strong><br>
+    일부 팬덤에서는 동일 MV의 연속 재생을 피하고
+    다른 영상을 함께 감상하거나 시간당 재생 횟수를
+    제한하는 방식을 사용합니다.<br><br>
+    ※ 정확한 재시청 간격·시간당 횟수·볼륨 등의
+    조회수 인정 공식은 YouTube가 공개하지 않았습니다.
+  </p>
+</div>
+
+<div class="card">
+  <div class="yellow"> 상세 이미지 가이드</div>
+
+  <details style="margin-top:18px;">
+    <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
+       BiiiG M/V 상세 이미지 가이드 보기
+    </summary>
+<p class="small" style="margin-top:10px;">
+  가이드 이미지 제작 · 빅뱅음원총공팀
+</p>
+    <div style="margin-top:14px;">
+      <img
+        src="file_00000000212c82098d7b3bcbaf6fc184.png"
+        alt="BiiiG YouTube MV Streaming Guide"
+        style="width:100%;height:auto;border-radius:12px;"
+      >
+    </div>
+  </details>
+
+  <details style="margin-top:22px;">
+    <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
+       LIVE FAST DIE SLOW M/V 상세 이미지 가이드 보기
+    </summary>
+<p class="small" style="margin-top:10px;">
+  가이드 이미지 제작 · 빅뱅월드 VIP 카페
+</p>
+    <div style="margin-top:14px;">
+      <img
+        src="file_00000000cb18720981059b1e2c3dce03 (1).png"
+        alt="LIVE FAST DIE SLOW YouTube MV Streaming Guide"
+        style="width:100%;height:auto;border-radius:12px;"
+      >
+    </div>
+  </details>
+</div>
+<div class="card">
+  <div class="yellow"> YOUTUBE MUSIC STREAMING GUIDE</div>
+  <h3>Official Audio 스트리밍 가이드</h3>
+
+  <p class="small">
+    ✔ YouTube Music에서 공식 음원 확인<br>
+    ✔ 로그인 상태에서 정상적으로 재생<br>
+    ✔ 기본 재생속도로 처음부터 끝까지 감상<br>
+    ✔ BiiiG 단독 음원 또는 BIGBANG 플레이리스트 이용 가능<br>
+    ✔ 좋아요·보관함 추가 등 일반적인 기능 이용 가능
+  </p>
+
+<p class="small">
+  <strong> PLAYLIST 활용</strong><br>
+  사이트의 YOUTUBE MUSIC PLAYLISTS에서는<br>
+  BIGBANG의 음악을 중심으로 멤버들의 음악도 함께 감상할 수 있는
+  다양한 플레이리스트를 제공합니다.<br><br>
+
+  각 플레이리스트는 구성과 목적이 다를 수 있으므로
+  내용을 확인한 후 선택하여 이용해주세요.<br><br>
+
+  YouTube Music · Spotify · Apple Music 등<br>
+  지원되는 음악 서비스의
+  <strong>플레이리스트 가져오기 / 저장하기</strong> 기능을 이용하면
+  플레이리스트를 다른 음악 서비스로 가져와 사용할 수 있습니다.
+</p>
+
+<p class="small">
+  <strong>💡 팬 스트리밍 참고</strong><br>
+  팬 커뮤니티에서는 다양한 구성의 플레이리스트를
+  스트리밍에 활용하기도 합니다.<br><br>
+
+  플레이리스트 구성이나 재생 방식에 관한 팬 커뮤니티의 권장사항은
+  YouTube Music이 공식적으로 공개한 집계 기준과는 다를 수 있습니다.<br>
+  정확한 집계 방식과 세부 기준은 공개되어 있지 않으므로
+  일반적인 서비스 이용 범위에서 활용해주세요.
+</p>
+  <details style="margin-top:18px;">
+  <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
+     YouTube Music 상세 이미지 가이드 보기
+  </summary>
+<p class="small" style="margin-top:10px;">
+  가이드 이미지 제작 · 빅뱅음원총공팀
+</p>
+  <div style="margin-top:14px;">
+    <img src="youtubemusic.png"
+         alt="YouTube Music Streaming Guide"
+         style="width:100%;height:auto;border-radius:12px;">
+  </div>
+</details>
+</div>
+  <div class="card">
+  <div class="yellow">ℹ️ GUIDE NOTICE</div>
+
+  <p class="small">
+    본 가이드는 YouTube·YouTube Music의 일반적인 이용 방식과
+    팬덤에서 널리 사용하는 스트리밍 권장사항을 참고해 정리했습니다.<br><br>
+
+    YouTube는 조회수·스트리밍 집계에 대한 세부 계산 공식,
+    정확한 재생 간격 및 시간당 재생 횟수 등의 기준을
+    공개하지 않습니다.<br><br>
+
+    공식 콘텐츠를 정상적으로 감상하고,
+    봇·매크로 등 자동화 도구를 이용한 비정상적인 재생은
+    사용하지 않습니다.
+  </p>
+
+  <p class="small">
+    Updated 2026.09.13
+  </p>
+  </div>
+<section id="archive">
+  <h2> OFFICIAL VIDEO ARCHIVE</h2>
+
+  <!-- CURRENT PRIORITY -->
+  <div class="card">
+    <div class="yellow">🔥 CURRENT PRIORITY</div>
+
+    <p class="small">
+      <strong>BiiiG Official M/V</strong><br>
+      BIGBANG Official
+    </p>
+
+    <a class="button"
+       href="https://youtu.be/L8ZnXgbyUuc"
+       target="_blank">▶ WATCH</a>
+  </div>
+<!-- CURRENT PRIORITY 끝 -->
+<!-- VIP PICK FEATURE -->
+<div class="card" id="vip-pick">
+  <div class="yellow">💌 VIP PICK FEATURE</div>
+
+  <p class="small">
+    <strong>HUB OPENING PICK · 2026</strong>
+  </p>
+
+  <h3>BIGBANG – LAST DANCE</h3>
+
+  <p class="small">
+    BIGBANG · Official M/V
+  </p>
+
+  <p class="small">
+    현재의 BIGBANG과 우리가 함께 지나온 시간을 이어 바라보며,
+    허브의 시작을 함께할 공식 영상으로 선정했습니다.
+  </p>
+
+  <details style="margin-top:18px;">
+    <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
+       영상 이야기 더 보기
+    </summary>
+
+    <div style="margin-top:16px;">
+      <p class="small">
+        <strong>이 영상에 대해</strong><br><br>
+
+        〈LAST DANCE〉는 BIGBANG 정규 3집 《MADE》에 수록된 곡으로,
+        오랜 시간 함께해 온 팬들을 향한 BIGBANG의 진솔한 마음과
+        자신들의 이야기를 담은 곡입니다.<br><br>
+
+        《MADE》는 2015년부터 이어진 MADE SERIES와
+        BIGBANG 데뷔 10주년 프로젝트를 마무리한 앨범이기도 합니다.
+        그런 앨범의 마지막 시기에 공개된 〈LAST DANCE〉 M/V는
+        BIGBANG이 지나온 한 시기를 돌아보게 하는 영상으로 남아 있습니다.<br><br>
+
+        시간이 흐른 지금 다시 만나는 〈LAST DANCE〉는
+        당시의 기억을 되짚는 동시에,
+        과거의 BIGBANG과 지금의 BIGBANG을 이어 바라볼 수 있다는 점에서도
+        이 허브의 아카이브 취지와 잘 어울리는 영상입니다.
+      </p>
+
+      <p class="small">
+        <strong>💛 선정 이유</strong><br><br>
+
+        현재의 BIGBANG을 보여주는 BiiiG이 CURRENT PRIORITY에 있다면,
+        HUB OPENING PICK에서는 우리가 함께 지나온 시간도
+        다시 꺼내보고 싶었습니다.<br><br>
+
+        새로운 영상뿐 아니라 오래된 공식 영상 속 음악과 순간을
+        다시 발견하고 함께 나누는 것.
+        〈LAST DANCE〉를 첫 오프닝 PICK으로 선정한 이유이자,
+        이 아카이브가 만들어진 이유 중 하나입니다.
+      </p>
+    </div>
+  </details>
+
+  <a class="button"
+     href="https://youtu.be/--zku6TB5NY"
+     target="_blank">▶ WATCH</a>
+
+  <p class="small" style="margin-top:16px;">
+    사이트 오픈을 위해 운영자가 선정한 임시 PICK입니다.<br>
+    첫 번째 정식 VIP PICK은 VIP VIDEO SUGGESTION을 통해
+    보내주신 추천을 참고하여 선정합니다.
+  </p>
+</div>
+<!-- ANNIVERSARY & SPECIAL -->
+<div class="card">
+  <details>
+    <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
+       ANNIVERSARY &amp; SPECIAL
+    </summary>
+
+    <div style="margin-top:18px;">
+      <p class="small">
+        <strong>BIGBANG 20TH ANNIVERSARY</strong><br>
+        20th Anniversary Official Video · 2026
+      </p>
+
+      <a class="button"
+         href="https://youtu.be/PfDOzy2vLG0"
+         target="_blank">▶ WATCH</a>
+    </div>
+  </details>
+</div>
+  <!-- BIGBANG -->
+  <div class="card">
+    <details>
+      <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
+          BIGBANG
+      </summary>
+      <div style="margin-top:18px;">
+        <p class="small">
+          <strong>LAST DANCE Official M/V</strong><br>
+          BIGBANG Official
+        </p>
+
+        <a class="button"
+           href="https://youtu.be/--zku6TB5NY"
+           target="_blank">▶ WATCH</a>
+      </div>
+    </details>
+  </div>
+
+
+  <!-- MEMBER SOLO -->
+  <div class="card">
+    <details>
+      <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
+          MEMBER SOLO
+      </summary>
+
+      <div style="margin-top:18px;">
+
+        <p class="small">
+          <strong>G-DRAGON — TOO BAD</strong><br>
+          Official Video
+        </p>
+
+        <a class="button"
+           href="https://youtu.be/o9DhvbqYzns"
+           target="_blank">▶ WATCH</a>
+
+        <hr style="border:0;border-top:1px solid #333;margin:24px 0;">
+
+        <p class="small">
+          <strong>TAEYANG — LIVE FAST DIE SLOW</strong><br>
+          Official M/V
+        </p>
+
+        <a class="button"
+           href="https://youtu.be/pB3W-k0kQ8U"
+           target="_blank">▶ WATCH</a>
+
+        <hr style="border:0;border-top:1px solid #333;margin:24px 0;">
+
+        <p class="small">
+          <strong>DAESUNG — Universe</strong><br>
+          Official M/V
+        </p>
+
+        <a class="button"
+           href="https://youtu.be/PHToFdx20ac"
+           target="_blank">▶ WATCH</a>
+
+      </div>
+    </details>
+  </div>
+
+
+  <!-- SPECIAL PERFORMANCE -->
+  <div class="card">
+    <details>
+      <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
+          SPECIAL PERFORMANCE
+      </summary>
+
+      <div style="margin-top:18px;">
+        <p class="small">
+          <strong>HOME SWEET HOME</strong><br>
+          G-DRAGON feat. TAEYANG &amp; DAESUNG<br>
+          2024 MAMA AWARDS · FIRST PERFORMANCE
+        </p>
+
+        <a class="button"
+           href="https://youtu.be/QtFNIZV_RO8"
+           target="_blank">▶ WATCH</a>
+      </div>
+    </details>
+  </div>
+
+
+  <!-- PERFORMANCE & DANCE -->
+  <div class="card">
+    <details>
+      <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
+          PERFORMANCE &amp; DANCE
+      </summary>
+
+      <div style="margin-top:18px;">
+        <p class="small">
+          <strong>BiiiG DANCE PRACTICE</strong><br>
+          BIGBANG Official
+        </p>
+
+        <a class="button"
+           href="https://youtu.be/B5u8JiGVI_k"
+           target="_blank">▶ WATCH</a>
+      </div>
+    </details>
+  </div>
+<!-- VIP VIDEO SUGGESTION -->
+<div class="card">
+  <div class="yellow"> VIP VIDEO SUGGESTION</div>
+
+  <h3>공식 영상 추천</h3>
+
+  <p class="small">
+    BIGBANG &amp; MEMBERS의 공식 YouTube 영상 중<br>
+    아카이브에서 함께 보고 싶은 영상을 추천해주세요.<br><br>
+
+    추천은 순위나 경쟁을 위한 투표가 아닙니다.<br>
+    팬 여러분의 추천과 영상이 가진 의미를 참고하여
+    아카이브를 계속 업데이트합니다.
+  </p>
+
+  <a class="button"
+     href="https://forms.gle/M63L43VkkAHGHkzk6"
+     target="_blank">✉️ VIDEO SUGGESTION</a>
+</div>
+<!-- UPDATE NOTE -->
+<div class="card">
+  <details>
+    <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
+      📝 UPDATE NOTE
+    </summary>
+
+    <div style="margin-top:18px;">
+      <p class="small">
+        허브의 주요 업데이트 기록을 확인할 수 있습니다.
+      </p>
+
+      <p class="small">
+        <strong>2026.09.14</strong><br>
+        · ABOUT THIS HUB 안내 업데이트<br>
+        · VIP PICK FEATURE · HUB OPENING PICK 추가<br>
+        · ANNIVERSARY &amp; SPECIAL 아카이브 추가<br>
+        · YouTube Music Playlist 정보 업데이트<br>
+        · VIP VIDEO SUGGESTION 추가<br>
+        · SITE FEEDBACK 추가
+      </p>
+    </div>
+  </details>
+</div>
+<!-- SITE FEEDBACK -->
+<div class="card">
+  <div class="yellow">💬 SITE FEEDBACK</div>
+
+  <h3>사이트 건의</h3>
+
+  <p class="small">
+    사이트를 이용하면서 발견한 오류나<br>
+    개선 의견을 자유롭게 남겨주세요.<br><br>
+
+    링크·영상 오류, 사이트 기능 및 디자인 개선 등<br>
+    보내주신 의견은 사이트 업데이트에 참고합니다.<br>
+    필요한 변경사항은 UPDATE NOTE를 통해 안내할 수 있습니다.
+  </p>
+
+  <a class="button"
+     href="https://forms.gle/titjXtgrL1DFVU9o7"
+     target="_blank">💬 SEND FEEDBACK</a>
+</div>
+</section>
+
+<footer>
+BIGBANG YouTube Streaming Hub
+<br>
+<span class="small">Fan-operated Official Video Archive &amp; Participation Hub</span>
+</footer>
+
+</div>
+<script>
+fetch("data/youtube-charts.json?ts=" + Date.now(), {
+  cache: "no-store"
+})
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Chart data could not be loaded.");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    const chartBox = document.getElementById("youtube-chart");
+    const updatedBox = document.getElementById("youtube-chart-updated");
+
+    const musicVideos = data.entries || [];
+    const topSongs = data.weeklyTopSongs || [];
+    const topArtists = data.weeklyTopArtists || [];
+    function movement(item) {
+      if (!item.previousRank) return "NEW";
+      if (item.rank < item.previousRank) {
+        return `↑ ${item.previousRank - item.rank}`;
+      }
+      if (item.rank > item.previousRank) {
+        return `↓ ${item.rank - item.previousRank}`;
+      }
+      return "—";
+    }
+
+    function renderChart(title, items, type) {
+      let html = `<h3>${title}</h3>`;
+
+      if (!items.length) {
+        html += `
+          <div class="card">
+            <div class="small">이번 주 차트 진입 항목이 없습니다.</div>
+          </div>
+        `;
+        return html;
+      }
+
+      items.forEach((item) => {
+        const name = type === "artist" ? item.name : item.title;
+        const artist =
+          type === "artist" ? "" : (item.artists || []).join(" · ");
+
+        html += `
+          <div class="card chart">
+            <div>
+              <b>${name}</b>
+              ${artist ? `<div class="small">${artist}</div>` : ""}
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;white-space:nowrap;">
+              <span class="rank">#${item.rank}</span>
+              <span style="font-size:0.78em;color:#aaa;white-space:nowrap;">${movement(item)}</span>
+            </div>
+          </div>
+        `;
+      });
+
+      return html;
+    }
+        chartBox.innerHTML =
+      renderChart(" TOP MUSIC VIDEOS", musicVideos, "video") +
+      renderChart(" TOP SONGS", topSongs, "song") +
+      renderChart(" TOP ARTISTS", topArtists, "artist");
+
+    if (data.generatedAt) {
+      const updated = new Date(data.generatedAt);
+      updatedBox.textContent =
+        `Data fetched ${updated.toLocaleDateString("ko-KR")}`;
+    }
+  })
+  .catch((error) => {
+    console.error(error);
+
+    const chartBox = document.getElementById("youtube-chart");
+
+    chartBox.innerHTML = `
+      <div class="card">
+        <div class="small">
+          차트 데이터를 불러오지 못했습니다.<br>
+          잠시 후 다시 확인해주세요.
+        </div>
+      </div>
+    `;
+  });
+        </script>
+</body>
+</html>
+
