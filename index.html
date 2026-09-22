@@ -219,11 +219,11 @@ footer{
 
 <div class="top-nav">
 
-<a class="nav-button" href="#video">🎬 VIDEO</a>
-<a class="nav-button" href="#audio">🎧 AUDIO</a>
-<a class="nav-button" href="#chart">📊 CHART</a>
-<a class="nav-button" href="#guide">📖 GUIDE</a>
-<a class="nav-button" href="#archive">📁 ARCHIVE</a>
+<a class="nav-button" href="#video"> VIDEO</a>
+<a class="nav-button" href="#audio"> AUDIO</a>
+<a class="nav-button" href="#chart"> CHART</a>
+<a class="nav-button" href="#guide"> GUIDE</a>
+<a class="nav-button" href="#archive"> ARCHIVE</a>
 </div>
 <!-- VIP PICK QUICK LINK -->
 <a href="#vip-pick"
@@ -239,7 +239,7 @@ footer{
 <!-- ABOUT THIS HUB -->
 <section id="about">
 <div class="card">
-    <div class="yellow">💛 ABOUT THIS HUB</div>
+    <div class="yellow"> ABOUT THIS HUB</div>
 
     <h3>Made by VIP, for VIP.</h3>
     <p class="small">BIGBANG Official Video Archive &amp; Fan Participation Hub</p>
@@ -360,7 +360,7 @@ footer{
 <h2 id="guide">📖 STREAMING GUIDE</h2>
 
 <div class="card">
-  <div class="yellow">🎬 MV STREAMING GUIDE</div>
+  <div class="yellow"> MV STREAMING GUIDE</div>
   <h3>Official M/V 시청 가이드</h3>
 
   <p class="small">
@@ -396,11 +396,11 @@ footer{
 </div>
 
 <div class="card">
-  <div class="yellow">🎬 상세 이미지 가이드</div>
+  <div class="yellow"> 상세 이미지 가이드</div>
 
   <details style="margin-top:18px;">
     <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
-      🎬 BiiiG M/V 상세 이미지 가이드 보기
+       BiiiG M/V 상세 이미지 가이드 보기
     </summary>
 <p class="small" style="margin-top:10px;">
   가이드 이미지 제작 · 빅뱅음원총공팀
@@ -416,7 +416,7 @@ footer{
 
   <details style="margin-top:22px;">
     <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
-      🎬 LIVE FAST DIE SLOW M/V 상세 이미지 가이드 보기
+       LIVE FAST DIE SLOW M/V 상세 이미지 가이드 보기
     </summary>
 <p class="small" style="margin-top:10px;">
   가이드 이미지 제작 · 빅뱅월드 VIP 카페
@@ -431,7 +431,7 @@ footer{
   </details>
 </div>
 <div class="card">
-  <div class="yellow">🎧 YOUTUBE MUSIC STREAMING GUIDE</div>
+  <div class="yellow"> YOUTUBE MUSIC STREAMING GUIDE</div>
   <h3>Official Audio 스트리밍 가이드</h3>
 
   <p class="small">
@@ -443,7 +443,7 @@ footer{
   </p>
 
 <p class="small">
-  <strong>🎧 PLAYLIST 활용</strong><br>
+  <strong> PLAYLIST 활용</strong><br>
   사이트의 YOUTUBE MUSIC PLAYLISTS에서는<br>
   BIGBANG의 음악을 중심으로 멤버들의 음악도 함께 감상할 수 있는
   다양한 플레이리스트를 제공합니다.<br><br>
@@ -469,7 +469,7 @@ footer{
 </p>
   <details style="margin-top:18px;">
   <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
-    🎧 YouTube Music 상세 이미지 가이드 보기
+     YouTube Music 상세 이미지 가이드 보기
   </summary>
 <p class="small" style="margin-top:10px;">
   가이드 이미지 제작 · 빅뱅음원총공팀
@@ -502,7 +502,7 @@ footer{
   </p>
   </div>
 <section id="archive">
-  <h2>📁 OFFICIAL VIDEO ARCHIVE</h2>
+  <h2> OFFICIAL VIDEO ARCHIVE</h2>
 
   <!-- CURRENT PRIORITY -->
   <div class="card">
@@ -590,7 +590,7 @@ footer{
 <div class="card">
   <details>
     <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
-      🎉 ANNIVERSARY &amp; SPECIAL
+       ANNIVERSARY &amp; SPECIAL
     </summary>
 
     <div style="margin-top:18px;">
@@ -609,7 +609,7 @@ footer{
   <div class="card">
     <details>
       <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
-         👑 BIGBANG
+          BIGBANG
       </summary>
       <div style="margin-top:18px;">
         <p class="small">
@@ -629,7 +629,7 @@ footer{
   <div class="card">
     <details>
       <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
-         🎤 MEMBER SOLO
+          MEMBER SOLO
       </summary>
 
       <div style="margin-top:18px;">
@@ -674,7 +674,7 @@ footer{
   <div class="card">
     <details>
       <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
-         💛 SPECIAL PERFORMANCE
+          SPECIAL PERFORMANCE
       </summary>
 
       <div style="margin-top:18px;">
@@ -696,7 +696,7 @@ footer{
   <div class="card">
     <details>
       <summary style="cursor:pointer;font-weight:bold;color:#ffd400;">
-         🎬 PERFORMANCE &amp; DANCE
+          PERFORMANCE &amp; DANCE
       </summary>
 
       <div style="margin-top:18px;">
@@ -713,7 +713,7 @@ footer{
   </div>
 <!-- VIP VIDEO SUGGESTION -->
 <div class="card">
-  <div class="yellow">💛 VIP VIDEO SUGGESTION</div>
+  <div class="yellow"> VIP VIDEO SUGGESTION</div>
 
   <h3>공식 영상 추천</h3>
 
@@ -844,9 +844,9 @@ fetch("data/youtube-charts.json?ts=" + Date.now(), {
       return html;
     }
         chartBox.innerHTML =
-      renderChart("🎬 TOP MUSIC VIDEOS", musicVideos, "video") +
-      renderChart("🎧 TOP SONGS", topSongs, "song") +
-      renderChart("👑 TOP ARTISTS", topArtists, "artist");
+      renderChart(" TOP MUSIC VIDEOS", musicVideos, "video") +
+      renderChart(" TOP SONGS", topSongs, "song") +
+      renderChart(" TOP ARTISTS", topArtists, "artist");
 
     if (data.generatedAt) {
       const updated = new Date(data.generatedAt);
