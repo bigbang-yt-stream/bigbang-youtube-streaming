@@ -1,92 +1,81 @@
 {
-  "generatedAt": "2026-09-27T10:05:22.220Z",
+  "generatedAt": "2026-09-27T23:05:09.482Z",
   "country": "KR",
   "chart": "weekly-top-music-videos",
   "entries": [
     {
-      "rank": 22,
-      "previousRank": null,
-      "title": "BIGBANG - ‘BiiiG’ LIVE PERFORMANCE | BIGBANG 2026-2027 WORLD TOUR [ XX : COSMOS ] IN GOYANG",
-      "videoId": "YA1IK2HzmGw",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "405494",
-      "thumbnail": "https://i.ytimg.com/vi/YA1IK2HzmGw/maxresdefault.jpg"
-    },
-    {
-      "rank": 30,
-      "previousRank": 11,
-      "title": "BIGBANG - ‘BiiiG’ M/V",
-      "videoId": "L8ZnXgbyUuc",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "294354",
-      "thumbnail": "https://i.ytimg.com/vi/L8ZnXgbyUuc/maxresdefault.jpg"
-    },
-    {
-      "rank": 51,
-      "previousRank": 22,
-      "title": "BIGBANG - ‘BiiiG’ DANCE PRACTICE",
-      "videoId": "B5u8JiGVI_k",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "201026",
-      "thumbnail": "https://i.ytimg.com/vi/B5u8JiGVI_k/maxresdefault.jpg"
-    },
-    {
-      "rank": 78,
-      "previousRank": null,
+      "rank": 46,
+      "previousRank": 78,
       "title": "HARU HARU(하루하루)",
       "videoId": "MzCbEdtNbJ0",
       "artists": [
         "BIGBANG"
       ],
-      "viewCount": "126344",
+      "viewCount": "229264",
       "thumbnail": "https://i.ytimg.com/vi/MzCbEdtNbJ0/maxresdefault.jpg"
+    },
+    {
+      "rank": 63,
+      "previousRank": 30,
+      "title": "BIGBANG - ‘BiiiG’ M/V",
+      "videoId": "L8ZnXgbyUuc",
+      "artists": [
+        "BIGBANG"
+      ],
+      "viewCount": "181714",
+      "thumbnail": "https://i.ytimg.com/vi/L8ZnXgbyUuc/maxresdefault.jpg"
+    },
+    {
+      "rank": 70,
+      "previousRank": 51,
+      "title": "BIGBANG - ‘BiiiG’ DANCE PRACTICE",
+      "videoId": "B5u8JiGVI_k",
+      "artists": [
+        "BIGBANG"
+      ],
+      "viewCount": "160878",
+      "thumbnail": "https://i.ytimg.com/vi/B5u8JiGVI_k/maxresdefault.jpg"
+    },
+    {
+      "rank": 74,
+      "previousRank": 22,
+      "title": "BIGBANG - ‘BiiiG’ LIVE PERFORMANCE | BIGBANG 2026-2027 WORLD TOUR [ XX : COSMOS ] IN GOYANG",
+      "videoId": "YA1IK2HzmGw",
+      "artists": [
+        "BIGBANG"
+      ],
+      "viewCount": "151047",
+      "thumbnail": "https://i.ytimg.com/vi/YA1IK2HzmGw/maxresdefault.jpg"
     }
   ],
   "weeklyTopSongs": [
     {
-      "rank": 11,
-      "previousRank": 8,
+      "rank": 19,
+      "previousRank": 11,
       "title": "BiiiG",
       "videoId": "B5u8JiGVI_k",
       "artists": [
         "BIGBANG"
       ],
-      "viewCount": "2273149",
+      "viewCount": "1696719",
       "thumbnail": "https://i.ytimg.com/vi/B5u8JiGVI_k/maxresdefault.jpg"
-    },
-    {
-      "rank": 79,
-      "previousRank": 64,
-      "title": "Blue",
-      "videoId": "2GRP1rkE4O0",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "489879",
-      "thumbnail": "https://i.ytimg.com/vi/2GRP1rkE4O0/maxresdefault.jpg"
     }
   ],
   "weeklyTopArtists": [
     {
       "rank": 3,
-      "previousRank": 1,
+      "previousRank": 3,
       "name": "BIGBANG",
       "channelId": "UCzw-C7fNfs018R1FzIKnlaA",
-      "viewCount": "12190695",
+      "viewCount": "11613117",
       "thumbnail": "https://yt3.googleusercontent.com/X4IlIyw4Yjpl2qio5QA-uxj5vIa_EVSg5dyibJrmKcPrj0BKFcKYhKUTyacNbHaGHxP_zVYB3jv-Cv0"
     },
     {
-      "rank": 28,
-      "previousRank": 16,
+      "rank": 29,
+      "previousRank": 28,
       "name": "G-DRAGON",
       "channelId": "UCeU5qTuBiqTU5z-hyL6WITQ",
-      "viewCount": "4704013",
+      "viewCount": "4648079",
       "thumbnail": "https://lh3.googleusercontent.com/QF5_9GNj1eOdWzO2V9b26JhoLwNDG0PwOlbOdHlcyUHUAoSjRBrzHxodlLj6O-cj6mKLYN6tjRfZ6A"
     }
   ]
