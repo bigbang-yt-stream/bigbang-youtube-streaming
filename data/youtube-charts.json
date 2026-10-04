@@ -1,63 +1,41 @@
 {
-  "generatedAt": "2026-10-04T02:59:01.029Z",
+  "generatedAt": "2026-10-04T16:05:55.148Z",
   "country": "KR",
   "chart": "weekly-top-music-videos",
   "entries": [
     {
-      "rank": 46,
-      "previousRank": 78,
-      "title": "HARU HARU(하루하루)",
-      "videoId": "MzCbEdtNbJ0",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "229264",
-      "thumbnail": "https://i.ytimg.com/vi/MzCbEdtNbJ0/maxresdefault.jpg"
-    },
-    {
-      "rank": 63,
-      "previousRank": 30,
+      "rank": 83,
+      "previousRank": 63,
       "title": "BIGBANG - ‘BiiiG’ M/V",
       "videoId": "L8ZnXgbyUuc",
       "artists": [
         "BIGBANG"
       ],
-      "viewCount": "181714",
+      "viewCount": "119946",
       "thumbnail": "https://i.ytimg.com/vi/L8ZnXgbyUuc/maxresdefault.jpg"
     },
     {
-      "rank": 70,
-      "previousRank": 51,
+      "rank": 90,
+      "previousRank": 70,
       "title": "BIGBANG - ‘BiiiG’ DANCE PRACTICE",
       "videoId": "B5u8JiGVI_k",
       "artists": [
         "BIGBANG"
       ],
-      "viewCount": "160878",
+      "viewCount": "112650",
       "thumbnail": "https://i.ytimg.com/vi/B5u8JiGVI_k/maxresdefault.jpg"
-    },
-    {
-      "rank": 74,
-      "previousRank": 22,
-      "title": "BIGBANG - ‘BiiiG’ LIVE PERFORMANCE | BIGBANG 2026-2027 WORLD TOUR [ XX : COSMOS ] IN GOYANG",
-      "videoId": "YA1IK2HzmGw",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "151047",
-      "thumbnail": "https://i.ytimg.com/vi/YA1IK2HzmGw/maxresdefault.jpg"
     }
   ],
   "weeklyTopSongs": [
     {
-      "rank": 19,
-      "previousRank": 11,
+      "rank": 27,
+      "previousRank": 19,
       "title": "BiiiG",
       "videoId": "B5u8JiGVI_k",
       "artists": [
         "BIGBANG"
       ],
-      "viewCount": "1696719",
+      "viewCount": "1173356",
       "thumbnail": "https://i.ytimg.com/vi/B5u8JiGVI_k/maxresdefault.jpg"
     }
   ],
@@ -67,15 +45,15 @@
       "previousRank": 3,
       "name": "BIGBANG",
       "channelId": "UCzw-C7fNfs018R1FzIKnlaA",
-      "viewCount": "11613117",
+      "viewCount": "9542729",
       "thumbnail": "https://yt3.googleusercontent.com/X4IlIyw4Yjpl2qio5QA-uxj5vIa_EVSg5dyibJrmKcPrj0BKFcKYhKUTyacNbHaGHxP_zVYB3jv-Cv0"
     },
     {
-      "rank": 29,
-      "previousRank": 28,
+      "rank": 31,
+      "previousRank": 29,
       "name": "G-DRAGON",
       "channelId": "UCeU5qTuBiqTU5z-hyL6WITQ",
-      "viewCount": "4648079",
+      "viewCount": "4058482",
       "thumbnail": "https://lh3.googleusercontent.com/QF5_9GNj1eOdWzO2V9b26JhoLwNDG0PwOlbOdHlcyUHUAoSjRBrzHxodlLj6O-cj6mKLYN6tjRfZ6A"
     }
   ]
