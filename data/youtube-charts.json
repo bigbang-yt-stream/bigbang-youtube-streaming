@@ -1,41 +1,18 @@
 {
-  "generatedAt": "2026-10-05T10:08:51.576Z",
+  "generatedAt": "2026-10-15T01:08:39.465Z",
   "country": "KR",
   "chart": "weekly-top-music-videos",
-  "entries": [
-    {
-      "rank": 83,
-      "previousRank": 63,
-      "title": "BIGBANG - ‘BiiiG’ M/V",
-      "videoId": "L8ZnXgbyUuc",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "119946",
-      "thumbnail": "https://i.ytimg.com/vi/L8ZnXgbyUuc/maxresdefault.jpg"
-    },
-    {
-      "rank": 90,
-      "previousRank": 70,
-      "title": "BIGBANG - ‘BiiiG’ DANCE PRACTICE",
-      "videoId": "B5u8JiGVI_k",
-      "artists": [
-        "BIGBANG"
-      ],
-      "viewCount": "112650",
-      "thumbnail": "https://i.ytimg.com/vi/B5u8JiGVI_k/maxresdefault.jpg"
-    }
-  ],
+  "entries": [],
   "weeklyTopSongs": [
     {
-      "rank": 27,
-      "previousRank": 19,
+      "rank": 31,
+      "previousRank": 27,
       "title": "BiiiG",
       "videoId": "B5u8JiGVI_k",
       "artists": [
         "BIGBANG"
       ],
-      "viewCount": "1173356",
+      "viewCount": "943321",
       "thumbnail": "https://i.ytimg.com/vi/B5u8JiGVI_k/maxresdefault.jpg"
     }
   ],
@@ -45,15 +22,15 @@
       "previousRank": 3,
       "name": "BIGBANG",
       "channelId": "UCzw-C7fNfs018R1FzIKnlaA",
-      "viewCount": "9542729",
+      "viewCount": "8956286",
       "thumbnail": "https://yt3.googleusercontent.com/X4IlIyw4Yjpl2qio5QA-uxj5vIa_EVSg5dyibJrmKcPrj0BKFcKYhKUTyacNbHaGHxP_zVYB3jv-Cv0"
     },
     {
-      "rank": 31,
-      "previousRank": 29,
+      "rank": 34,
+      "previousRank": 31,
       "name": "G-DRAGON",
       "channelId": "UCeU5qTuBiqTU5z-hyL6WITQ",
-      "viewCount": "4058482",
+      "viewCount": "3999781",
       "thumbnail": "https://lh3.googleusercontent.com/QF5_9GNj1eOdWzO2V9b26JhoLwNDG0PwOlbOdHlcyUHUAoSjRBrzHxodlLj6O-cj6mKLYN6tjRfZ6A"
     }
   ]
